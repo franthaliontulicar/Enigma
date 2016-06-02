@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mecanismo
+public abstract class Mecanismo
 {
     // instance variables - replace the example below with your own
     private int numero;
@@ -30,8 +30,12 @@ public class Mecanismo
         // put your code here
         return numero;
     }
+       
+    public abstract int encriptacion();
     
-    public String toString(){
+    public abstract int desencriptar();
+    
+     public String toString(){
         return "El numero introducido es: "+numero;
     
     }

@@ -8,7 +8,7 @@
 public class Enigma
 {
     // instance variables - replace the example below with your own
-    
+    private int x;
 
     /**
      * Constructor for objects of class Enigma
@@ -16,7 +16,7 @@ public class Enigma
     public Enigma()
     {
         // initialise instance variables
-        
+        x = 0;
     }
 
     /**
