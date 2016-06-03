@@ -44,6 +44,20 @@ public class MecanismoOffset extends Mecanismo
         encrip += num * (Math.pow(10, index));
         return encrip;
     }
+    
+    /**
+     * 
+     * public int encripta(int numeroAEncriptar)
+     * {
+     *     String numeroString = Integer.toString(numeroAEncriptar); 
+     *     String numeroADevolver = numeroString.substring(0,1);
+     *     for(int i = 1; i < numeroString.length(); i++){
+     *         numeroADevolver += (Integer.parseInt( numeroString.substring(i, i + 1)) + getNumeroParaEncriptar()) % 10;      
+     *      }
+     *      return Integer.parseInt(numeroADevolver);
+     *  }
+     * 
+     */
 
     /**
      * 
