@@ -13,10 +13,10 @@ public class MecanismoOffset extends Mecanismo
     /**
      * Constructor for objects of class MecanismoOffset
      */
-    public MecanismoOffset(int num, int a)
+    public MecanismoOffset( int a)
     {
         // initialise instance variables
-        super(num);
+        super(5);
         numeroA = a;
     }
 
@@ -33,7 +33,7 @@ public class MecanismoOffset extends Mecanismo
     }
 
     @Override
-    public int encriptacion(){
+    public int encripta(){
         int numEncrip = 0;
         int result = 0;
         while(numeroA >= 1 && numeroA <= 9 ){
@@ -53,20 +53,20 @@ public class MecanismoOffset extends Mecanismo
     }
 
     @Override
-    public int desencriptar(){
+    public int desencripta(){
         int des = 0;
-        if(encriptacion() < 10 ){
-            des = encriptacion() - numeroA;
+        if(encripta() < 10 ){
+            des = encripta() - numeroA;
         }
         else{
-            des = encriptacion() %10 - numeroA;
+            des = encripta() %10 - numeroA;
         }
         return des;
     }
 
     @Override
     public String toString(){
-        String dato = "el numero A es: "+numeroA+ " el numeor encriptado es: "+encriptacion();
+        String dato = "el numero A es: "+numeroA+ " el numeor encriptado es: "+encripta();
         return super.toString() +dato;
     }
 

@@ -13,10 +13,10 @@ public class MecanismoMultiplicacionPrimo extends Mecanismo
     /**
      * Constructor for objects of class MecanismoMultiplicacionPrimo
      */
-    public MecanismoMultiplicacionPrimo(int num,int primo)
+    public MecanismoMultiplicacionPrimo(int primo)
     {
         // initialise instance variables
-        super(num);
+        super(5);
         numeroPrimo = primo;
     }
 
@@ -33,18 +33,18 @@ public class MecanismoMultiplicacionPrimo extends Mecanismo
     }
     
     @Override
-    public int encriptacion(){
+    public int encripta(){
        return getNumero()* numeroPrimo;
     }
     
     @Override
-    public int desencriptar(){
-       return encriptacion()/numeroPrimo;
+    public int desencripta(){
+       return encripta()/numeroPrimo;
     }
     
     @Override
     public String toString(){
-       String dato = "el numero primo es: "+numeroPrimo+ " el numeor encriptado es: "+encriptacion();
+       String dato = "el numero primo es: "+numeroPrimo+ " el numeor encriptado es: "+encripta();
        return super.toString() +dato;
     }
 }

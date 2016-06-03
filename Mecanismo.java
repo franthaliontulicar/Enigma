@@ -31,12 +31,8 @@ public abstract class Mecanismo
         return numero;
     }
        
-    public abstract int encriptacion();
+    public abstract int encripta();
     
-    public abstract int desencriptar();
+    public abstract int desencripta();
     
-     public String toString(){
-        return "El numero introducido es: "+numero;
-    
-    }
-}
+ }
