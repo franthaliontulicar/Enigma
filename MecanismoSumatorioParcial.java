@@ -29,13 +29,13 @@ public class MecanismoSumatorioParcial extends Mecanismo
    
     @Override
     public int encripta(int num){
-        int result = 0;
+        int encrip = 0;
         int sum = num;
         while( sum >= getNumero()){
-            result += sum;
+           encrip += sum;
             sum--;
         }
-        return result;
+        return encrip;
     }
 
     /**
@@ -43,13 +43,13 @@ public class MecanismoSumatorioParcial extends Mecanismo
      */
     @Override
     public int desencripta(int num){
-        int result = 0;
-        int divi = num - getNumero();
-        int sum = 1;
-        for(int i = 0; i <= divi; i++)
-            sum += i;
-        result = (num + sum)/ divi;
-        return result;
+        int sum = getNumero();
+        int encrip = num;
+        while(sum < encrip){
+            encrip -= sum;
+            sum++;
+        }
+        return encrip;
     }
 
     
