@@ -29,12 +29,12 @@ public class MecanismoMultiplicacionPrimo extends Mecanismo
    
     
     @Override
-    public int encripta(int num){
+    public int encriptacion(int num){
        return getNumero()* num;
     }
     
     @Override
-    public int desencripta(int num){
+    public int desencriptacion(int num){
        return num / getNumero();
     }
     

@@ -29,7 +29,7 @@ public class MecanismoOffset extends Mecanismo
     
 
     @Override
-    public int encripta(int num){
+    public int encriptacion(int num){
         int encrip = 0;
         int index = 0;
         int result;
@@ -49,7 +49,7 @@ public class MecanismoOffset extends Mecanismo
      * 
      */
     @Override
-    public int desencripta(int num){
+    public int desencriptacion(int num){
         int des = 0;
         int index = 0;
         int result;

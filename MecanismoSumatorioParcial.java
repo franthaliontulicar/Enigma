@@ -28,7 +28,7 @@ public class MecanismoSumatorioParcial extends Mecanismo
      */
    
     @Override
-    public int encripta(int num){
+    public int encriptacion(int num){
         int encrip = 0;
         int sum = num;
         while( sum >= getNumero()){
@@ -42,7 +42,7 @@ public class MecanismoSumatorioParcial extends Mecanismo
      * 
      */
     @Override
-    public int desencripta(int num){
+    public int desencriptacion(int num){
         int sum = getNumero();
         int encrip = num;
         while(sum < encrip){
