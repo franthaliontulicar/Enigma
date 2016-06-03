@@ -31,8 +31,10 @@ public abstract class Mecanismo
         return numero;
     }
        
-    public abstract int encripta();
+    public abstract int encripta(int num);
     
-    public abstract int desencripta();
+    public abstract int desencripta(int num);
+    
+    
     
  }

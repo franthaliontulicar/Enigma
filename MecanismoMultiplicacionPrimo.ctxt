@@ -1,14 +1,10 @@
 #BlueJ class context
-comment0.params=primo
+comment0.params=num
 comment0.target=MecanismoMultiplicacionPrimo(int)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MecanismoMultiplicacionPrimo\r\n
-comment1.params=
-comment1.target=int\ getPrimo()
+comment1.params=num
+comment1.target=int\ encripta(int)
 comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-comment2.params=
-comment2.target=int\ encripta()
-comment3.params=
-comment3.target=int\ desencripta()
-comment4.params=
-comment4.target=java.lang.String\ toString()
-numComments=5
+comment2.params=num
+comment2.target=int\ desencripta(int)
+numComments=3

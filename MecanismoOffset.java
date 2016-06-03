@@ -8,16 +8,16 @@
 public class MecanismoOffset extends Mecanismo
 {
     // instance variables - replace the example below with your own
-    private int numeroA;
+   
 
     /**
      * Constructor for objects of class MecanismoOffset
      */
-    public MecanismoOffset( int a)
+    public MecanismoOffset( int num)
     {
         // initialise instance variables
-        super(5);
-        numeroA = a;
+        super(num);
+        
     }
 
     /**
@@ -26,48 +26,45 @@ public class MecanismoOffset extends Mecanismo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int getNumA()
-    {
-        // put your code here
-        return numeroA;
-    }
+    
 
     @Override
-    public int encripta(){
-        int numEncrip = 0;
-        int result = 0;
-        while(numeroA >= 1 && numeroA <= 9 ){
-            if(getNumero() < 10){
-               result = getNumero() + numeroA;     
-               numEncrip = result;
-            }
-            else{
-               result = (getNumero()/10) + numeroA;
-               if(result > 10){
-                   numEncrip = result % 10 +numeroA;
-               }
-              
-            }
+    public int encripta(int num){
+        int encrip = 0;
+        int index = 0;
+        int result;
+        while(num > 10){
+            result = (num % 10) + getNumero();
+            if(result >= 10)
+                result = result % 10;
+            encrip += result * (Math.pow(10, index));
+            num = num / 10;
+            index++;
         }
-        return numEncrip;
+        encrip += num * (Math.pow(10, index));
+        return encrip;
     }
 
+    /**
+     * 
+     */
     @Override
-    public int desencripta(){
+    public int desencripta(int num){
         int des = 0;
-        if(encripta() < 10 ){
-            des = encripta() - numeroA;
+        int index = 0;
+        int result;
+        while(num > 10){
+            result = (num % 10) - getNumero() + 10;
+            if(result >= 10)
+                result = result % 10;
+            des += result * (Math.pow(10, index));
+            num = num / 10;
+            index++;
         }
-        else{
-            des = encripta() %10 - numeroA;
-        }
+        des += num * (Math.pow(10, index));
         return des;
     }
 
-    @Override
-    public String toString(){
-        String dato = "el numero A es: "+numeroA+ " el numeor encriptado es: "+encripta();
-        return super.toString() +dato;
-    }
+   
 
 }

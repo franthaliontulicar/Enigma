@@ -29,14 +29,14 @@ public class Enigma
     {
         int result = -1;
         if(num > 10)
-            result = mecanismo01.encripta();
+            result = mecanismo01.encripta(num);
         return result;
     }
 
     
     public int desencripta(Mecanismo mecanismo01, int num)
     {
-        int result = mecanismo01.desencripta();
+        int result = mecanismo01.desencripta(num);
         if(result <= 10)
             result = -1;
         return result;
