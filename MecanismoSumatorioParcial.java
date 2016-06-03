@@ -44,12 +44,12 @@ public class MecanismoSumatorioParcial extends Mecanismo
     @Override
     public int desencriptacion(int num){
         int sum = getNumero();
-        int encrip = num;
-        while(sum < encrip){
-            encrip -= sum;
+        int des = num;
+        while(sum < des){
+            des -= sum;
             sum++;
         }
-        return encrip;
+        return des;
     }
 
     
